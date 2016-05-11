@@ -7,9 +7,10 @@ describe('Interface: CardInterface', function () {
 
     beforeEach(inject(function (CardInterface) {
 
-        cardObject = CardInterface.setCard("Test Card", "T", 1);
+        cardObject = CardInterface.setCard("red", "Test Card", "T", 1);
 
         testCardObject = {
+            color: "red",
             name: "Test Card",
             suit: "T",
             cardvalue: 1

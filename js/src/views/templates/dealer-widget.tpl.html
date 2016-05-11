@@ -3,17 +3,17 @@
         <div class="columns large-12">
             <h3>Deck/Deal Controls</h3>
 
-            <p>
+            <p class="dealer-input">
                 <label for="newHandTotalCards">How many cards you want?</label>
                 <input type="number" min="0" max="{{deck.length}}" id="newHandTotalCards" ng-model="cardscount"/>
             </p>
 
             <div class="row">
-                <div class="columns large-12 medium-6 small-6">
+                <div class="columns large-6 medium-12 small-12 dealer-controls">
                     <button class="button" ng-click="resetTable()">Reset Table</button>
                     <button ng-disabled="deck.length < 1" class="button" ng-click="shuffleDeck()">Shuffle Deck</button>
                 </div>
-                <div class="columns large-12 medium-6 small-6">
+                <div class="columns large-6 medium-12 small-12 dealer-controls">
                     <button ng-disabled="deck.length < 1" class="button" ng-click="drawHand()">Draw Hand</button>
                     <button ng-disabled="draw == null || draw.length < 2" class="button" ng-click="sortDraw()">Sort Draw</button>
                 </div>

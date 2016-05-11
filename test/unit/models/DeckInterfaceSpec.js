@@ -8,12 +8,13 @@ describe('Interface: DeckInterface', function () {
     beforeEach(inject(function (DeckInterface, CardInterface) {
 
         var cardObjectArray = [
-            CardInterface.setCard("Test Card", "T", 1)
+            CardInterface.setCard("red", "Test Card", "T", 1)
         ];
 
         deckObject = DeckInterface.setDeck(cardObjectArray);
 
         testDeckObject = [{
+            color: "red",
             name: "Test Card",
             suit: "T",
             cardvalue: 1

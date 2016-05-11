@@ -14,7 +14,7 @@ describe('Controller: Main controller', function () {
     }));
 
     it('should have the correct deck payload length', function () {
-        expect(scope.deck.length).toBe(52);
+        expect(scope.deck.length).toBe(104);
     });
 
     it('should have initial cardscount set', function () {

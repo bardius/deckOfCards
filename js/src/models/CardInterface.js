@@ -18,8 +18,9 @@
         _self.cardObject = {};
 
         return {
-            setCard: function (name, suit, cardvalue) {
+            setCard: function (color, name, suit, cardvalue) {
                 _self.cardObject = {
+                    color: color,
                     name: name,
                     suit: suit,
                     cardvalue: cardvalue

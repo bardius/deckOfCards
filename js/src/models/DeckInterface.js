@@ -3,7 +3,7 @@
  * @name app.models:DeckInterface
  *
  * @description
- * Card factory to create card objects
+ * Card factory to create deck objects
  *
  */
 (function () {

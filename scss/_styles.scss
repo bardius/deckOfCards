@@ -380,6 +380,111 @@ header{
 }
 
 /* -----------------------------------------
+   Deck Card Styles
+----------------------------------------- */
+
+.dealer-input {
+
+    label {
+        text-align: center;
+    }
+
+    input {
+        text-align: center;
+        max-width: 30%;
+        margin: 0 auto;
+        font-size: rem-calc(20);
+        font-weight: bold;
+        height: rem-calc(40);
+    }
+}
+
+.dealer-controls {
+    text-align: center;
+}
+
+/* -----------------------------------------
+   Deck Card Styles
+----------------------------------------- */
+
+.deck {
+    margin-left: 0;
+    padding: 20px;
+    background-color: $light-gray-color;
+    overflow: hidden;
+}
+
+.deck-card {
+    display: inline-block;
+    position: relative;
+    clear: both;
+    float: left;
+
+    &::after {
+        display: inline-block;
+        font-size: inherit;
+        padding-left: 12px;
+        content: "";
+    }
+
+    &.is-color-red {
+        color: #990000;
+
+        &.is-suit-H {
+            &::after {
+                content: "\2661";
+            }
+        }
+
+        &.is-suit-S {
+            &::after {
+                content: "\2664";
+            }
+        }
+
+        &.is-suit-C {
+            &::after {
+                content: "\2667";
+            }
+        }
+
+        &.is-suit-D {
+            &::after {
+                content: "\2662";
+            }
+        }
+    }
+
+    &.is-color-black {
+        color: #000000;
+
+        &.is-suit-H {
+            &::after {
+                content: "\2665";
+            }
+        }
+
+        &.is-suit-S {
+            &::after {
+                content: "\2660";
+            }
+        }
+
+        &.is-suit-C {
+            &::after {
+                content: "\2663";
+            }
+        }
+
+        &.is-suit-D {
+            &::after {
+                content: "\2666";
+            }
+        }
+    }
+}
+
+/* -----------------------------------------
    Footer Styles
 ----------------------------------------- */
 

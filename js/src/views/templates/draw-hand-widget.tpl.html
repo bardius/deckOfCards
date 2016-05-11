@@ -2,9 +2,9 @@
     <div class="row">
         <div class="columns large-12">
             <h3>Drawn Cards</h3>
-            <ul>
-                <li class="" ng-repeat="drawncard in draw track by $index">
-                    [{{$index + 1}}] {{drawncard.name}}
+            <ul class="deck" ng-if="draw != null && draw.length > 0">
+                <li class="deck-card is-color-{{drawncard.color}} is-suit-{{drawncard.suit}}" ng-repeat="drawncard in draw track by $index">
+                    [{{$index + 1}}] {{drawncard.color}} {{drawncard.name}}
                 </li>
                 <li class="" ng-if="draw.length == 0">
                     <strong>No cards have been drawn yet</strong>
