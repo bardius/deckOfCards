@@ -18,6 +18,12 @@ most common features. You can find the documentation for Zurb Foundation 5 here 
 Pages are generated with grunt assemble npm module from handlebars templates while Zurb Foundation 5 is integrated.
 Good practices are being used for htaccess, favicons, html meta, og meta, twitter card meta, google analytics etc.
 
+Editorconfig file and jshint is in place to ensure coding and formatting standards are in place, along with a gitignore 
+file to filter the tracked files at will.
+
+Travis CI service is used to test the build (running the grunt bundle task in the Travis Servers) as changes are 
+getting committed.
+
 Requirements
 
 * [NodeJs]  (http://nodejs.org/) (+v4.4)
@@ -102,7 +108,7 @@ required tasks.
 Testing, coverage & reports
 ---------------------------------------------
 
-Karma is in place as a test runner with jasmine for unit tests and protractor for end to end AnjularJS tests. 
+Karma is in place as a test runner with jasmine for unit tests and protractor for end to end AngularJs tests. 
 Tests can be run with the corresponding grunt tasks. Upon the tests completion reports are getting generated for coverage
 and end to end testing scenarios with screen shots and are placed within /test/test-reports.
 
