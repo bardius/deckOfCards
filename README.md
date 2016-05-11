@@ -112,6 +112,10 @@ Karma is in place as a test runner with jasmine for unit tests and protractor fo
 Tests can be run with the corresponding grunt tasks. Upon the tests completion reports are getting generated for coverage
 and end to end testing scenarios with screen shots and are placed within /test/test-reports.
 
+Chrome is required for the protractor end to end tests. In case that the browser is not existing in the system or is not
+able for selenium usage via the webdriver please edit the test/protractor-conf.js file an use the browser of prefference
+at line 59.
+
     Related grunt tasks:
     
     * grunt karma:unit
