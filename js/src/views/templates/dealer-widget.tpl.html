@@ -5,17 +5,17 @@
 
             <p class="dealer-input">
                 <label for="newHandTotalCards">How many cards you want?</label>
-                <input type="number" min="0" max="{{deck.length}}" id="newHandTotalCards" ng-model="cardscount"/>
+                <input id="newHandTotalCards" ng-model="cardscount" type="number" min="0" max="{{deck.length}}" />
             </p>
 
             <div class="row">
                 <div class="columns large-6 medium-12 small-12 dealer-controls">
-                    <button class="button" ng-click="resetTable()">Reset Table</button>
-                    <button ng-disabled="deck.length < 1" class="button" ng-click="shuffleDeck()">Shuffle Deck</button>
+                    <button id="resetTableBtn" class="button" ng-click="resetTable()">Reset Table</button>
+                    <button id="shuffleDeckBtn" ng-disabled="deck.length < 1" class="button" ng-click="shuffleDeck()">Shuffle Deck</button>
                 </div>
                 <div class="columns large-6 medium-12 small-12 dealer-controls">
-                    <button ng-disabled="deck.length < 1" class="button" ng-click="drawHand()">Draw Hand</button>
-                    <button ng-disabled="draw == null || draw.length < 2" class="button" ng-click="sortDraw()">Sort Draw</button>
+                    <button id="drawHandBtn" ng-disabled="deck.length < 1" class="button" ng-click="drawHand()">Draw Hand</button>
+                    <button id="sortDrawBtn" ng-disabled="draw == null || draw.length < 2" class="button" ng-click="sortDraw()">Sort Draw</button>
                 </div>
             </div>
         </div>

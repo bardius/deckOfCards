@@ -19,6 +19,11 @@ describe('Interface: CardInterface', function () {
     }));
 
     describe("CardInterface", function () {
+/*
+        it('should have setCard method', function () {
+            expect(CardInterface.setCard).toEqual(testCardObject);
+        });
+*/
         it('should create a card', function () {
             expect(cardObject).toEqual(testCardObject);
         });

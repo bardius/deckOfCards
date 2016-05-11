@@ -6,7 +6,8 @@ describe('Filter: SortCardsFilter', function () {
     var filters;
 
     // Initialize the service and a mock backend
-    beforeEach(inject(function ($injector, $filter) {
+    beforeEach(inject(function ($injector, $filter, DeckDataService) {
+
         filters = $filter;
     }));
 

@@ -4,10 +4,10 @@ angular.module("views/home.tpl.html", []).run(["$templateCache", function($templ
   $templateCache.put("views/home.tpl.html",
     "<div class=\"row\">\n" +
     "    <div class=\"columns large-12\">\n" +
-    "        <div ng-notification-widget notification=\"notification\"></div>\n" +
-    "        <div ng-deck-widget deck=\"deck\"></div>\n" +
-    "        <div ng-dealer-widget cardscount=\"cardscount\" deck=\"deck\" draw=\"draw\"></div>\n" +
-    "        <div ng-draw-hand-widget draw=\"draw\"></div>\n" +
+    "        <div id=\"notificationContainer\" ng-notification-widget notification=\"notification\"></div>\n" +
+    "        <div id=\"deckContainer\" ng-deck-widget deck=\"deck\"></div>\n" +
+    "        <div id=\"dealerContainer\" ng-dealer-widget cardscount=\"cardscount\" deck=\"deck\" draw=\"draw\"></div>\n" +
+    "        <div id=\"drawContainer\" ng-draw-hand-widget draw=\"draw\"></div>\n" +
     "    </div>\n" +
     "</div>\n" +
     "");
@@ -35,17 +35,17 @@ angular.module("views/templates/dealer-widget.tpl.html", []).run(["$templateCach
     "\n" +
     "            <p class=\"dealer-input\">\n" +
     "                <label for=\"newHandTotalCards\">How many cards you want?</label>\n" +
-    "                <input type=\"number\" min=\"0\" max=\"{{deck.length}}\" id=\"newHandTotalCards\" ng-model=\"cardscount\"/>\n" +
+    "                <input id=\"newHandTotalCards\" ng-model=\"cardscount\" type=\"number\" min=\"0\" max=\"{{deck.length}}\" />\n" +
     "            </p>\n" +
     "\n" +
     "            <div class=\"row\">\n" +
     "                <div class=\"columns large-6 medium-12 small-12 dealer-controls\">\n" +
-    "                    <button class=\"button\" ng-click=\"resetTable()\">Reset Table</button>\n" +
-    "                    <button ng-disabled=\"deck.length < 1\" class=\"button\" ng-click=\"shuffleDeck()\">Shuffle Deck</button>\n" +
+    "                    <button id=\"resetTableBtn\" class=\"button\" ng-click=\"resetTable()\">Reset Table</button>\n" +
+    "                    <button id=\"shuffleDeckBtn\" ng-disabled=\"deck.length < 1\" class=\"button\" ng-click=\"shuffleDeck()\">Shuffle Deck</button>\n" +
     "                </div>\n" +
     "                <div class=\"columns large-6 medium-12 small-12 dealer-controls\">\n" +
-    "                    <button ng-disabled=\"deck.length < 1\" class=\"button\" ng-click=\"drawHand()\">Draw Hand</button>\n" +
-    "                    <button ng-disabled=\"draw == null || draw.length < 2\" class=\"button\" ng-click=\"sortDraw()\">Sort Draw</button>\n" +
+    "                    <button id=\"drawHandBtn\" ng-disabled=\"deck.length < 1\" class=\"button\" ng-click=\"drawHand()\">Draw Hand</button>\n" +
+    "                    <button id=\"sortDrawBtn\" ng-disabled=\"draw == null || draw.length < 2\" class=\"button\" ng-click=\"sortDraw()\">Sort Draw</button>\n" +
     "                </div>\n" +
     "            </div>\n" +
     "        </div>\n" +

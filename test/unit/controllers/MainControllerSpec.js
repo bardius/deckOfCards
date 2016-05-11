@@ -1,17 +1,18 @@
 describe('Controller: Main controller', function () {
-    var scope, MainController, location, route, rootScope;
+    var scope, rootScope;
 
-    beforeEach(module('app'));
+    beforeEach(function(){
+        angular.mock.module('app');
 
-    beforeEach(inject(function ($controller, $rootScope) {
-        rootScope = $rootScope;
-        scope = $rootScope.$new();
+        inject(function (_$controller_, _$rootScope_) {
+            rootScope = _$rootScope_;
+            scope = _$rootScope_.$new();
 
-        MainController = $controller('MainController', {
-            $scope: scope
+            _$controller_('MainController', {
+                $scope: scope
+            });
         });
-
-    }));
+    });
 
     it('should have the correct deck payload length', function () {
         expect(scope.deck.length).toBe(104);
@@ -24,4 +25,5 @@ describe('Controller: Main controller', function () {
     it('should not have a draw', function () {
         expect(scope.draw).toBeNull();
     });
+
 });
