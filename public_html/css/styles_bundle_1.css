@@ -12587,6 +12587,92 @@ header h3 {
 }
 
 /* -----------------------------------------
+   Deck Card Styles
+----------------------------------------- */
+
+.dealer-input label {
+  text-align: center;
+}
+
+.dealer-input input {
+  text-align: center;
+  max-width: 30%;
+  margin: 0 auto;
+  font-size: 1.25rem;
+  font-weight: bold;
+  height: 2.5rem;
+}
+
+.dealer-controls {
+  text-align: center;
+}
+
+/* -----------------------------------------
+   Deck Card Styles
+----------------------------------------- */
+
+.deck {
+  margin-left: 0;
+  padding: 20px;
+  background-color: #EEEEEE;
+  overflow: hidden;
+}
+
+.deck-card {
+  display: inline-block;
+  position: relative;
+  clear: both;
+  float: left;
+}
+
+.deck-card::after {
+  display: inline-block;
+  font-size: inherit;
+  padding-left: 12px;
+  content: "";
+}
+
+.deck-card.is-color-red {
+  color: #990000;
+}
+
+.deck-card.is-color-red.is-suit-H::after {
+  content: "\2661";
+}
+
+.deck-card.is-color-red.is-suit-S::after {
+  content: "\2664";
+}
+
+.deck-card.is-color-red.is-suit-C::after {
+  content: "\2667";
+}
+
+.deck-card.is-color-red.is-suit-D::after {
+  content: "\2662";
+}
+
+.deck-card.is-color-black {
+  color: #000000;
+}
+
+.deck-card.is-color-black.is-suit-H::after {
+  content: "\2665";
+}
+
+.deck-card.is-color-black.is-suit-S::after {
+  content: "\2660";
+}
+
+.deck-card.is-color-black.is-suit-C::after {
+  content: "\2663";
+}
+
+.deck-card.is-color-black.is-suit-D::after {
+  content: "\2666";
+}
+
+/* -----------------------------------------
    Footer Styles
 ----------------------------------------- */
 
