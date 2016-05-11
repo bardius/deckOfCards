@@ -1,5 +1,7 @@
 [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
 [![Build Status](https://travis-ci.org/bardius/deckOfCards.svg?branch=master)](https://travis-ci.org/bardius/deckOfCards)
+[![Dependency Status](https://www.versioneye.com/user/projects/573331eaa0ca350034be76b8/badge.png)](https://www.versioneye.com/user/projects/573331eaa0ca350034be76b8)
+[![Dependency Status](https://www.versioneye.com/user/projects/573331eca0ca35004cf77c41/badge.png)](https://www.versioneye.com/user/projects/573331eca0ca35004cf77c41)
 
 Deck of Cards AngularJs Application
 ============================================================================
