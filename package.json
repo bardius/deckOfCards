@@ -1,0 +1,76 @@
+{
+    "name": "deckOfCards",
+    "title": "Deck of Cards AngularJs Application",
+    "description": "An Angular web app that emulates a card deck game deal hand",
+    "version": "1.0.0",
+    "homepage": "",
+    "docs": "https://github.com/bardius/deckOfCards/master/README.md",
+    "authors": [
+        {
+            "name": "George Bardis",
+            "url": "http://www.bardis.info"
+        }
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/bardius/deckOfCards"
+    },
+    "bugs": {
+        "url": "https://github.com/bardius/deckOfCards/issues"
+    },
+    "license": "MIT",
+    "engines": {
+        "node": ">= 0.10.0"
+    },
+    "devDependencies": {
+        "assemble": "~0.4.42",
+        "autoprefixer": "^6.0.1",
+        "grunt": "~0.4.5",
+        "grunt-angular-templates": "~1.0.3",
+        "grunt-autoprefixer": "~3.0.3",
+        "grunt-bower-task": "~0.4.0",
+        "grunt-combine-mq": "~0.9.0",
+        "grunt-contrib-clean": "~1.0.0",
+        "grunt-contrib-connect": "~1.0.2",
+        "grunt-contrib-copy": "~1.0.0",
+        "grunt-contrib-jasmine": "~1.0.3",
+        "grunt-contrib-jshint": "~1.0.0",
+        "grunt-contrib-sass": "~1.0.0",
+        "grunt-contrib-uglify": "~1.0.1",
+        "grunt-contrib-watch": "~1.0.0",
+        "grunt-csso": "~1.0.0",
+        "grunt-csssplit": "~0.4.0",
+        "grunt-karma": "~1.0.0",
+        "grunt-karma-coveralls": "^2.5.2",
+        "grunt-newer": "~1.2.0",
+        "grunt-ng-annotate": "^2.0.2",
+        "grunt-ngdocs": "~0.2.10",
+        "grunt-notify": "~0.4.0",
+        "grunt-protractor-runner": "^3.2.0",
+        "jasmine-core": "~2.4.1",
+        "jit-grunt": "~0.10.0",
+        "karma": "~0.13.22",
+        "karma-chrome-launcher": "^1.0.1",
+        "karma-coverage": "^1.0.0",
+        "karma-firefox-launcher": "^1.0.0",
+        "karma-jasmine": "~1.0.2",
+        "karma-jshint-preprocessor": "0.0.6",
+        "karma-ng-html2js-preprocessor": "^1.0.0",
+        "karma-phantomjs-launcher": "^1.0.0",
+        "load-grunt-config": "~0.19.1",
+        "load-grunt-tasks": "~3.5.0",
+        "phantomjs-prebuilt": "~2.1.1",
+        "protractor": "^3.3.0",
+        "protractor-jasmine2-screenshot-reporter": "~0.3.1",
+        "grunt-html2js": "~0.3.6"
+    },
+    "keywords": [
+        "Grunt",
+        "Angularjs",
+        "deck"
+    ],
+    "scripts": {
+        "update-webdriver": "webdriver-manager update",
+        "postinstall": "bower install && webdriver-manager update"
+    }
+}

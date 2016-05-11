@@ -1,0 +1,477 @@
+/* -----------------------------------------
+   Foundation Styles Overrides
+----------------------------------------- */
+
+header, nav, article, footer, address,
+section, aside, hgroup, figure{
+    display: block;
+}
+
+body, div, dl, dt, dd, ul, ol, li, pre,
+form, fieldset, p, blockquote, th, td {
+}
+
+h1, h2, h3, h4, h5, h6 {
+    letter-spacing: 1px;
+}
+
+iframe {
+    left: 0;
+    border: none!important;
+}
+
+a{
+}
+
+a:hover, a:focus{
+}
+
+.inv{
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.hidden{
+    display: none!important;
+    visibility: hidden!important;
+}
+
+img{
+    border: none;
+}
+
+strong {
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: bold;
+}
+
+table {
+    font-size: inherit;
+    float: left;
+    border-spacing: 0!important;
+    border-collapse: collapse!important;
+}
+
+td{
+    text-align: center;
+    padding: 5px;
+}
+
+.clearBoth{
+    clear: both;
+}
+
+[class*="column"] + [class*="column"]:last-child {
+    float: left;
+}
+
+.hidden{
+    display: none;
+}
+
+.no-padding {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.contain-to-grid {
+    background: none transparent;
+
+    &.fixed {
+        background-color: $white-color;
+    }
+}
+
+.button {
+    letter-spacing: 1px;
+    font-family: $alt-font-family;
+
+    &.hollow {
+        background-color: $white-color;
+        color: $dark-green;
+        border: 1px solid $dark-green;
+        border-radius: 4px;
+
+        &:hover,
+        &:focus {
+            color: $white-color;
+            background-color: $dark-green;
+        }
+    }
+}
+
+/*-------------------------------------------
+    Website Body / Backgrounds
+  -----------------------------------------*/
+
+body {
+    min-height: 100%;
+    width: 100%;
+    background-color: $black-color;
+}
+
+.superWrapper{
+    width: 100%;
+    min-height: 100%;
+    min-width: 320px;
+}
+
+.wrapper{
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.pageContents{
+    min-height: 300px;
+}
+
+
+/*-------------------------------------------
+    Website Logo / Header
+  -----------------------------------------*/
+
+header{
+    overflow: visible;
+    position: relative;
+    background-color: $white-color;
+    margin-bottom: rem-calc(60);
+
+    &::before {
+        background-color: $dark-green;
+        content: "";
+        display: block;
+        height: 7px;
+        position: fixed;
+        width: 100%;
+        z-index: 98;
+        top: 0;
+        left: 0;
+    }
+
+    &::after {
+        background: $dark-green none repeat scroll 0 0;
+        content: "";
+        display: block;
+        height: $topbar-height;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 50%;
+        z-index: 96;
+    }
+
+    .header {
+        position: relative;
+        z-index: 97;
+    }
+
+    #logo{
+        float: left;
+        position: relative;
+        z-index: 97;
+        max-width: 25%;
+
+        .logo{
+            float: left;
+            display: block;
+            margin: 0;
+            position: relative;
+
+            &::after {
+                border-right: $topbar-height/2 solid transparent;
+                border-bottom: $topbar-height solid $white-color;
+                content: "";
+                display: block;
+                height: $topbar-height;
+                width: $topbar-height/2;
+                position: absolute;
+                top: 0;
+                right: -$topbar-height/2;
+            }
+        }
+
+        a{
+            display: block;
+            background-color: $white-color;
+            width: 144px;
+            max-width: 100%;
+            overflow: hidden;
+            transition: all $topbar-transition-speed linear 0s;
+            font-size: rem-calc(8);
+            color: $white-color;
+
+            &:hover{
+
+                img{
+                    transform: rotate(-8deg);
+                }
+            }
+
+            img{
+                display: block;
+                max-width: 100%;
+                transition: all $topbar-transition-speed linear 0s;
+            }
+        }
+    }
+
+    .fixed {
+
+        &::after {
+            background: $dark-green none repeat scroll 0 0;
+            content: "";
+            display: block;
+            height: $topbar-height;
+            position: fixed;
+            right: 0;
+            top: 0;
+            width: 50%;
+            z-index: 96;
+        }
+
+        #logo {
+
+            a {
+                margin-top: 3px;
+                width: 104px;
+            }
+        }
+
+        .top-bar-section,
+        .title-area {
+            z-index: 97;
+        }
+
+        h3 {
+            font-size: rem-calc(14);
+            padding: rem-calc(14) rem-calc(20);
+        }
+    }
+
+    h3 {
+        display: block;
+        clear: right;
+        font-size: rem-calc(16);
+        padding: rem-calc(28) rem-calc(20);
+        margin: 0;
+        max-width: 75%;
+        text-align: right;
+    }
+}
+
+.f-topbar-fixed {
+
+    header {
+        margin-bottom: rem-calc(160);
+
+        &::after {
+            display: none;
+        }
+    }
+}
+
+/*-------------------------------------------
+    Navigation Menu Styles
+  -----------------------------------------*/
+
+.top-bar {
+    margin: 0;
+    overflow: visible!important;
+
+    &.expanded {
+        background-color: transparent;
+        height: $topbar-height!important;
+    }
+
+    .menu {
+
+        li{
+            border-left: 1px solid darken($dark-green, 5%);
+
+            &:first-child{
+                border: none;
+            }
+        }
+
+        a {
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all $topbar-transition-speed linear 0s;
+        }
+    }
+
+    &.expanded {
+        background-color: $dark-green;
+    }
+
+    .menu-icon {
+        font-family: $alt-font-family;
+        letter-spacing: 1px;
+
+        span {
+            padding-right: rem-calc(8);
+        }
+    }
+}
+
+.left-off-canvas-menu {
+
+    li{
+        position: relative;
+    }
+
+    ul.off-canvas-list li label{
+        font-size: rem-calc(18);
+        font-family: $alt-font-family;
+        border-bottom: $off-canvas-link-border-bottom;
+        letter-spacing: 1px;
+    }
+
+    a {
+        font-size: rem-calc(14);
+        font-family: $alt-font-family;
+        letter-spacing: 1px;
+
+        &.exit-off-canvas{
+            position: relative;
+            box-shadow: none;
+            background-color: $dark-green;
+
+            &:hover,
+            &:focus {
+                background-color: darken($dark-green, 5%);
+            }
+        }
+    }
+}
+
+/*-------------------------------------------
+    Generic Page styles
+  -----------------------------------------*/
+
+.contents-row {
+
+    .panel {
+
+        h3,
+        h4 {
+            color: $dark-green;
+        }
+
+
+        legend {
+            color: $dark-green;
+            font-family: $alt-font-family;
+            letter-spacing: 1px;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+/* -----------------------------------------
+   Footer Styles
+----------------------------------------- */
+
+footer{
+    background-color: $dark-green;
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 2rem 0;
+    margin-top: rem-calc(60);
+
+    #copyrights {
+        font-size: 0.875rem;
+        margin: 0 0 1rem 0;
+        color: $white-color;
+
+        a {
+            color: $white-color;
+
+            &:hover,
+            &:focus {
+                color: $white-color;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+
+/* ---------------------------------------------------
+   Media Queries for mobile / tablets responsiveness
+----------------------------------------------------- */
+
+@media #{$small-up} {
+
+    html {
+        font-size: 12px;
+    }
+}
+
+@media #{$small-only} {
+
+}
+
+@media #{$medium-down} {
+
+    header{
+
+        #logo,
+        .fixed #logo {
+
+            a{
+                margin-top: 3px;
+                width: 92px;
+            }
+        }
+
+        h3 {
+            font-size: rem-calc(14);
+            padding: rem-calc(14) rem-calc(20);
+
+            span {
+                display: none;
+            }
+        }
+    }
+}
+
+@media #{$medium-up} {
+
+    html {
+        font-size: 14px;
+    }
+}
+
+@media #{$medium-only} {
+
+}
+
+@media #{$large-up} {
+
+    html {
+        font-size: $rem-base;
+    }
+}
+
+@media #{$large-only} {
+
+}
+
+@media print {
+
+    div:not(.reveal-modal) {
+        display: inherit !important;
+    }
+}

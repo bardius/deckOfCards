@@ -1,0 +1,42 @@
+{
+    "globals": {
+        "angular": true,
+        "jQuery": true,
+        "console": true,
+        "module": true,
+        "document": true
+    },
+    "latedef": "nofunc",
+    "indent": 4,
+    "node": true,
+    "bitwise": true,
+    "camelcase": false,
+    "immed": true,
+    "newcap": true,
+    "quotmark": "single",
+    "strict": true,
+    "multistr": true,
+    "debug": false,
+    "undef": true,
+    "plusplus": false,
+    "eqeqeq": true,
+    "validthis": false,
+    "curly": true,
+    "expr": true,
+    "forin": true,
+    "laxcomma": true,
+    "maxerr": "50",
+    "noarg": true,
+    "noempty": true,
+    "smarttabs": false,
+    "trailing": true,
+    "unused": false,
+    "white": false,
+    "browser": true,
+    "devel": true,
+    "jquery": true,
+    "esnext": true,
+    "-W117": true
+}
+
+// -W117 disables all the variable not defined error instead of useing the jshint globals directive

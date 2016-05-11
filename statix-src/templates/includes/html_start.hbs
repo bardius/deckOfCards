@@ -1,0 +1,79 @@
+<!doctype html>
+<!--[if IE 8]> <html class="lt-ie9" lang="en-GB" ng-app="app"> <![endif]-->
+<html lang="en-GB" ng-app="app">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui"/>
+    <meta name="format-detection" content="telephone=no">
+
+    <title>{{ page.title }} | {{ page.siteName }}</title>
+    <meta name="description" content="{{ page.meta_description }} {{ page.siteName }}">
+    <meta name="keywords" content="{{ page.meta_keywords }}">
+
+    <link rel="alternate" hreflang="en" href="{{ page.siteURL }}{{ page.pageURL }}"/>
+    <link rel="canonical" href="{{ page.siteURL }}{{ page.pageURL }}"/>
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
+    <meta name="apple-mobile-web-app-title" content="{{ page.siteName }}">
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/images/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/images/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/images/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/images/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/images/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/images/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/images/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon-180x180.png">
+
+    <link rel="icon" type="image/png" href="/images/favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/images/favicons/favicon-194x194.png" sizes="194x194">
+    <link rel="icon" type="image/png" href="/images/favicons/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/images/favicons/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="/images/favicons/favicon-16x16.png" sizes="16x16">
+
+    <link rel="manifest" href="/images/favicons/manifest.json">
+    <link rel="mask-icon" href="/images/favicons/safari-pinned-tab.svg" color="#0c6d28">
+
+    <link rel="shortcut icon" href="/images/favicons/favicon.ico">
+
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-TileImage" content="/images/favicons/mstile-144x144.png">
+    <meta name="msapplication-config" content="/images/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/css/styles.css">
+
+    <!--[if !IE]><!-->
+    <script>
+        if ("ActiveXObject" in window) {
+            document.documentElement.className += ' is-ie';
+        }
+        if (/*@cc_on!@*/false) {
+            document.documentElement.className += ' is-ie10';
+        }
+        if (!(window.ActiveXObject) && "ActiveXObject" in window) {
+            document.documentElement.className += ' is-ie11';
+        }
+    </script>
+    <!--<![endif]-->
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:site" content="@{{ page.twitter_user }}" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="{{ page.title }} | {{ page.siteName }}" />
+    <meta name="twitter:description" content="{{ page.title }}. {{ page.twitter_description }}" />
+    <meta name="twitter:image:src" content="{{ page.siteURL }}/images/favicons/logo_media.jpg" />
+
+    <!-- Facebook Opengraph -->
+    <meta property="og:title" content="{{ page.title }} | {{ page.siteName }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ page.siteURL }}{{ page.pageURL }}" />
+    <meta property="og:image" content="{{ page.siteURL }}/images/favicons/logo_media.jpg" />
+    <meta property="og:description" content="{{ page.title }}. {{ page.fb_description }}" />
+
+</head>

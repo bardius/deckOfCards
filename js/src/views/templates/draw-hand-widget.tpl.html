@@ -1,0 +1,16 @@
+<div class="panel">
+    <div class="row">
+        <div class="columns large-12">
+            <h3>Drawn Cards</h3>
+            <ul>
+                <li class="" ng-repeat="drawncard in draw track by $index">
+                    [{{$index + 1}}] {{drawncard.name}}
+                </li>
+                <li class="" ng-if="draw.length == 0">
+                    <strong>No cards have been drawn yet</strong>
+                </li>
+            </ul>
+            <!-- TODO: Create a card for each drawn card to visualise the draw -->
+        </div>
+    </div>
+</div>
