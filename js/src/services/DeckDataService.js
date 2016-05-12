@@ -1,5 +1,5 @@
 /**
- * @ngdoc interface
+ * @ngdoc service
  * @name app.services:DeckDataService
  *
  * @description

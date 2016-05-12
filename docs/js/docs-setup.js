@@ -88,10 +88,10 @@ NG_DOCS={
       "section": "api",
       "id": "app.services:DeckDataService",
       "shortName": "DeckDataService",
-      "type": "interface",
+      "type": "service",
       "moduleName": "app",
       "shortDescription": "Deck factory. You can fetch here the deck from an API and the use it in controller",
-      "keywords": "api app controller deck factory fetch interface services"
+      "keywords": "api app controller deck factory fetch service services"
     }
   ],
   "apis": {
