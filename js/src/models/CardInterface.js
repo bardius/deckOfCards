@@ -1,5 +1,5 @@
 /**
- * @ngdoc interface
+ * @ngdoc service
  * @name app.models:CardInterface
  *
  * @description
@@ -14,21 +14,15 @@
 
     // Card Object interface
     function CardInterface() {
-        var _self = this;
-        _self.cardObject = {};
 
-        return {
-            setCard: function (color, name, suit, cardvalue) {
-                _self.cardObject = {
-                    color: color,
-                    name: name,
-                    suit: suit,
-                    cardvalue: cardvalue
-                };
+        function Card(color, name, suit, cardvalue){
+            this.color = color;
+            this.name = name;
+            this.suit = suit;
+            this.cardvalue = cardvalue;
+        }
 
-                return _self.cardObject;
-            }
-        };
+        return Card;
     }
 
 })();

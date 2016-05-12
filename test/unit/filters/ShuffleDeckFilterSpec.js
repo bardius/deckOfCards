@@ -1,22 +1,24 @@
 describe('Filter: ShuffleDeckFilter', function () {
+    var filters, originalDeck, shuffledDeck;
 
-    // load the service's module
-    beforeEach(module('app'));
+    beforeEach(function(){
+        angular.mock.module('app');
 
-    var filters;
+        inject(function (_$filter_, _DeckDataService_) {
+            filters = _$filter_;
 
-    // Initialize the service and a mock backend
-    beforeEach(inject(function ($injector, $filter) {
-        filters = $filter;
-    }));
-
-    describe("ShuffleDeckFilter", function () {
-/*
-        it('should the order of objects within a json array input', function () {
-            var capitalizedString = filters('ShuffleDeckFilter')('test');
-            expect(capitalizedString).toEqual('Test');
+            originalDeck = _DeckDataService_.getDeck();
         });
-*/
     });
 
+    describe("ShuffleDeckFilter", function () {
+
+        it('should change the order of objects within a json array', function () {
+            shuffledDeck = filters('ShuffleDeckFilter')(originalDeck.slice(0));
+
+            expect(shuffledDeck.length).toEqual(originalDeck.length);
+            expect(shuffledDeck).not.toEqual(originalDeck);
+        });
+
+    });
 });

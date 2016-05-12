@@ -1,31 +1,29 @@
 describe('Interface: DeckInterface', function () {
-    var deckObject;
-    var testDeckObject;
+    var deckObject, testDeckObject;
 
-    // load the service's module
-    beforeEach(module('app'));
+    beforeEach(function(){
+        angular.mock.module('app');
 
-    beforeEach(inject(function (DeckInterface, CardInterface) {
+        inject(function (_DeckInterface_, _CardInterface_) {
 
-        var cardObjectArray = [
-            CardInterface.setCard("red", "Test Card", "T", 1)
-        ];
+            var cardObjectArray = [
+                new _CardInterface_("red", "Test Card", "T", 1)
+            ];
 
-        deckObject = DeckInterface.setDeck(cardObjectArray);
+            deckObject = new _DeckInterface_(cardObjectArray);
 
-        testDeckObject = [{
-            color: "red",
-            name: "Test Card",
-            suit: "T",
-            cardvalue: 1
-        }];
-
-    }));
+            testDeckObject = [
+                new _CardInterface_("red", "Test Card", "T", 1)
+            ];
+        });
+    });
 
     describe("DeckInterface", function () {
+
         it('should contain a card', function () {
             expect(deckObject).toEqual(testDeckObject);
         });
+
     });
 
 });

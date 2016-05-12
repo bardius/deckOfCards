@@ -1,21 +1,23 @@
 describe('Directive: Notification widget directive', function () {
-    var scope, element, template;
+    var rootScope, scope, element, template;
 
-    beforeEach(module('app', 'views/templates/notification-widget.tpl.html'));
+    beforeEach(function(){
+        angular.mock.module('app', 'views/templates/notification-widget.tpl.html');
 
-    beforeEach(inject(function ($rootScope, $compile, $templateCache, $filter) {
+        inject(function (_$rootScope_, _$compile_, _$templateCache_) {
+            rootScope = _$rootScope_;
+            scope = _$rootScope_.$new();
 
-        scope = $rootScope.$new();
+            template = _$templateCache_.get('views/templates/notification-widget.tpl.html');
+            _$templateCache_.put('views/templates/notification-widget.tpl.html', this.template);
 
-        template = $templateCache.get('views/templates/notification-widget.tpl.html');
-        $templateCache.put('views/templates/notification-widget.tpl.html', this.template);
+            scope.notification = "Test message";
 
-        scope.notification = "Test message";
+            element = _$compile_('<div ng-notification-widget notification="notification"></div>')(scope);
 
-        element = $compile('<div ng-notification-widget notification="notification"></div>')(scope);
-
-        scope.$digest();
-    }));
+            scope.$digest();
+        });
+    });
 
     it('should display the test notification message', function () {
         expect(element.find('p').text()).toContain('Test message');

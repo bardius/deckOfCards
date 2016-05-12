@@ -47,9 +47,14 @@
         // Listening for any shuffle Deck events
         $scope.$on('shuffleDeck', function() {
             var deckToShuffle = $scope.deck;
-            $scope.deck = $filter('ShuffleDeckFilter')(deckToShuffle.slice(0));
 
-            $scope.notification = 'Deck is shuffled. ' + $scope.deck.length + ' cards exist in deck';
+            if(deckToShuffle !== null && deckToShuffle.length > 1){
+                $scope.deck = $filter('ShuffleDeckFilter')(deckToShuffle.slice(0));
+                $scope.notification = 'Deck is shuffled. ' + $scope.deck.length + ' cards exist in deck';
+            }
+            else {
+                $scope.notification = 'Deck is empty. 0 exist in deck';
+            }
         });
 
         // Listening for any draw Hand events
@@ -58,15 +63,20 @@
             var drawnCards = [];
             var totalCardsToDraw = $scope.cardscount;
 
-            for(totalCardsToDraw; totalCardsToDraw > 0; totalCardsToDraw -= 1){
-                drawnCards.push(currentDeck.shift());
+            if(totalCardsToDraw !== null && totalCardsToDraw > 0) {
+                for (totalCardsToDraw; totalCardsToDraw > 0; totalCardsToDraw -= 1) {
+                    drawnCards.push(currentDeck.shift());
+                }
+
+                // Assign the new deck and draw arrays as values
+                $scope.deck = currentDeck.slice(0);
+                $scope.draw = drawnCards.slice(0);
+
+                $scope.notification = $scope.draw.length + ' cards where drawn from the deck. ' + $scope.deck.length + ' cards remain in deck';
             }
-
-            // Assign the new deck and draw arrays as values
-            $scope.deck = currentDeck.slice(0);
-            $scope.draw = drawnCards.slice(0);
-
-            $scope.notification = $scope.draw.length + ' cards where drawn from the deck. ' + $scope.deck.length + ' cards remain in deck';
+            else {
+                $scope.notification = 'No cards where drawn from the deck. ' + $scope.deck.length + ' cards remain in deck';
+            }
         });
 
         // Listening for any sort draw events
@@ -76,9 +86,11 @@
             // Sort the drawn cards if more than one cards were drawn
             if(drawnCards !== null && drawnCards.length > 1){
                 $scope.draw = $filter('SortCardsFilter')(drawnCards.slice(0));
+                $scope.notification = $scope.draw.length + ' cards where sorted in the draw hand.';
             }
-
-            $scope.notification = $scope.draw.length + ' cards where sorted in the draw hand.';
+            else {
+                $scope.notification = '0 cards where sorted in the draw hand.';
+            }
         });
     }
 })();

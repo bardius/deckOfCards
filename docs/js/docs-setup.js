@@ -70,19 +70,19 @@ NG_DOCS={
       "section": "api",
       "id": "app.models:CardInterface",
       "shortName": "CardInterface",
-      "type": "interface",
+      "type": "service",
       "moduleName": "app",
       "shortDescription": "Card factory to create card objects",
-      "keywords": "api app card create factory interface models objects"
+      "keywords": "api app card create factory models objects service"
     },
     {
       "section": "api",
       "id": "app.models:DeckInterface",
       "shortName": "DeckInterface",
-      "type": "interface",
+      "type": "service",
       "moduleName": "app",
-      "shortDescription": "Card factory to create card objects",
-      "keywords": "api app card create factory interface models objects"
+      "shortDescription": "Card factory to create deck objects",
+      "keywords": "api app card create deck factory models objects service"
     },
     {
       "section": "api",

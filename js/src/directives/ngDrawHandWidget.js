@@ -32,8 +32,6 @@
             },
             templateUrl: 'views/templates/draw-hand-widget.tpl.html',
             link: function(scope, element) {
-                scope.$watch('draw', function(draw) {
-                });
             }
         };
 

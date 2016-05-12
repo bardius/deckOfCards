@@ -1,5 +1,5 @@
 /**
- * @ngdoc interface
+ * @ngdoc service
  * @name app.models:DeckInterface
  *
  * @description
@@ -14,15 +14,12 @@
 
     // Deck Object interface
     function DeckInterface() {
-        var _self = this;
-        _self.deckObject = {};
 
-        return {
-            setDeck: function (cardsArray) {
-                _self.deckObject = cardsArray.slice(0);
-                return _self.deckObject;
-            }
-        };
+        function Deck(cardsArray){
+            return cardsArray.slice(0);
+        }
+
+        return Deck;
     }
 
 })();

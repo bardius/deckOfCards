@@ -1,18 +1,20 @@
 describe('Deck of Cards Application', function () {
+    var scope, rootScope, controller;
 
-    beforeEach(module('app'));
+    beforeEach(function(){
+        angular.mock.module('app');
 
-    beforeEach(inject(function ($controller, $rootScope) {
-        rootScope = $rootScope;
-        scope = $rootScope.$new();
+        inject(function (_$controller_, _$rootScope_) {
+            rootScope = _$rootScope_;
+            scope = _$rootScope_.$new();
 
-        MainController = $controller('MainController', {
-            $scope: scope
+            controller = _$controller_('MainController', {
+                $scope: scope
+            });
         });
-
-    }));
+    });
 
     it('should have a main controller', function () {
-        expect(MainController).toBeTruthy();
+        expect(controller).toBeTruthy();
     });
 });
