@@ -20,7 +20,7 @@
     },
     "license": "MIT",
     "engines": {
-        "node": ">= 0.10.0"
+        "node": ">= 4.4.4"
     },
     "devDependencies": {
         "assemble": "~0.4.42",
