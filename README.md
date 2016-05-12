@@ -83,7 +83,7 @@ Grunt tasks
 ---------------------------------------------
 
 Grunt tasks have been created to support the automated builds while developing and when releasing to environments.
-The existing tasks can be found under the /grunt folder and are grouped in shorthand tasks withing Gulpfile.js
+The existing tasks can be found under the /grunt folder and are grouped in shorthand tasks within Gruntfile.js
 
 Essentially by running grunt serve all the assets are generated, a local server is spin up and tests are run, while 
 watch rebuilds any required assets, runs test and uses live reload as necessary.
